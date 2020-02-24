@@ -1,10 +1,11 @@
 %%
 clear
 close all
+tic;
 SampFreq = 20;     % 重采样频率
 
 %%
-filename = 'D:\Monitoring data\Huilv\2019\1101.txt';
+filename = '1108.txt';
 fid     = fopen(filename);
 % 读取文本，*表示跳过文本
 indata  = textscan(fid,'%*s %*s %d %*d %f');   
@@ -21,4 +22,4 @@ b2 = indata{2};
 sensor = 275;
 index = find(b1==sensor);
 data = b2(index);
-
+toc;
