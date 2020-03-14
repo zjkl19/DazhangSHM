@@ -1,0 +1,1 @@
+select top 100 * from D20200114 where MonitorDateTime like '%2020-01-14%' order by MonitorDateTime desc
