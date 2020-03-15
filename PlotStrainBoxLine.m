@@ -4,7 +4,7 @@
 %绘制应变箱线图
 
 %将异常数据置0
-for i=1:4
+for i=1:size(strain,2)
     index = find(strain(:,i)<-100);
     strain(index,i) = 0;
 end
@@ -34,7 +34,11 @@ for i = 1:4
 end
 
 boxplot(strain,'whisker',100,'symbol','b+')
-
+set(gca,'xtick',1:4);
+set(gca,'xticklabel',{'Sx-1','Sx-2', 'Sx-3','Sx-4'});
+xlabel('传感器编号');
+ylabel('应变(με)');
+ylim(gca,[-10,180]);
 
 
 

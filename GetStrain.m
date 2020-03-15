@@ -14,7 +14,8 @@ SampFreq = 20;     % 采样频率
 
 %大樟   SX4,SX3,SX2,SX1
 %channel=[541,542,543,544];
-channel=[543];
+%大樟   SX1,SX2,SX3,SX4
+channel=[544 543 542 541];
 
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
@@ -37,7 +38,7 @@ for i = 1:length(channel)
        
     value=cell2mat(totalData(:,valueColIndex));    %只取“值”
     xtime{i}=totalData(:,timeColIndex);    %获取时间
-    value=ProcessZeroStrain(value);
+    value=ProcessZeroData(value);
     %滤波后的数据
     %postData = firhighpass(value,[0.01 0.02],SampFreq);
     ostrain(1:length(value),i)=value;

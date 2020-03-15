@@ -4,7 +4,7 @@
 %% 如果第1个数据就是0，则该数据采用整体数据的均值
 
 %TODO：读取数据用1个Class重构
-function outdata=ProcessZeroStrain(data)
+function outdata=ProcessZeroData(data)
     zeroIndex=find(data==0);
     if data(1)==0
         data(1)=mean(data);

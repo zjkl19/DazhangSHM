@@ -1,10 +1,10 @@
-%% 绘制应变时程曲线
-%% 要提前算好strain变量，每1列表示每个通道的数据
+%% 绘制加速度时程曲线
+%% 要提前算好加速度变量，每1列表示每个通道的数据
 
-channelSelect=2;
+channelSelect=1;
 
 dataSize=size(totalData,1);
-plot(1:dataSize,ostrain(1:dataSize,channelSelect),'DisplayName','strain')
+plot(1:dataSize,acc(1:dataSize,channelSelect),'DisplayName','acc')
 
 %'Color',[1 1 1]表示白色
 
@@ -18,5 +18,5 @@ set(gca,'xtick',1:fix(dataSize/12):dataSize);
 set(gca,'xticklabel',{'0:00','02:00', '04:00','06:00' ,'08:00' ,'10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00', '24:00'});
 xlim(gca,[1,dataSize]);
 xlabel('时间');
-ylabel('应变(με)');
+ylabel('加速度(mm/s^2)');
 grid;
