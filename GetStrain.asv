@@ -13,8 +13,7 @@ SampFreq = 20;     % 采样频率
 %=[275,276,277,278,279,280,281,282,283,284,285,286,287];
 
 %大樟   SX4,SX3,SX2,SX1
-%channel=[541,542,543,544];
-channel=[543];
+channel=[541,542,543,544];
 
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
@@ -29,9 +28,7 @@ strain= zeros(1728000,length(channel));
 %xtime{i}表示第i个应变通道对应的时程数据
 %cell2mat由于不同时间字符串长度不同暂时无法使用
 
-%运行时间参考:
-%1728000个数据firhighpass(value,[0.01 0.02],SampFreq)大约耗时40s，
-%1728000个数据firhighpass(value,[0.003 0.005],SampFreq)大约耗时160s，
+%运行时间参考，1728000个数据firhighpass(value,[0.01 0.02],SampFreq);
 for i = 1:length(channel)
     totalData=GetDataFromSqlServer(table,channel(i),24*3600*20);    %原始数据，包含日期，通道，值
        

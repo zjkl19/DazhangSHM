@@ -5,7 +5,7 @@ tic;
 SampFreq = 20;     % 重采样频率
 
 %%
-filename = '1108.txt';
+filename = 'C:\VsProjects\DazhangSHM\MonitorData\2020-01-14.txt';
 fid     = fopen(filename);
 % 读取文本，*表示跳过文本
 indata  = textscan(fid,'%*s %*s %d %*d %f');   
@@ -19,7 +19,7 @@ b1 = indata{1};
 b2 = indata{2};
 
 % 指定分析通道号
-sensor = 275;
+sensor =542;
 index = find(b1==sensor);
 data = b2(index);
 toc;
