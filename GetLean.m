@@ -15,7 +15,7 @@ channel=[549 550 551 552];
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
 
-table='D20200114';
+table='D20191229';
 
 %TODO:考虑各个通道应变维度会不会不一样
 
@@ -34,9 +34,10 @@ for i = 1:length(channel)
     olean(1:length(value),i)=value;
     
     lean(1:length(value),i)=olean(1:length(value),i);
-    lean(find(lean(1:length(value),i)> 3),i)=0;
-    lean(find(lean(1:length(value),i)<-3),i)=0;
     lean(:,i)=ProcessZeroData(lean(:,i));
+    %lean(find(lean(1:length(value),i)> 3),i)=0;
+    %lean(find(lean(1:length(value),i)<-3),i)=0;
+   
     lean(:,i)=lean(:,i)-mean(lean(:,i));
     
 end

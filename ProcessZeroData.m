@@ -5,12 +5,15 @@
 
 %TODO：读取数据用1个Class重构
 function outdata=ProcessZeroData(data)
-    zeroIndex=find(data==0);
     if data(1)==0
         data(1)=mean(data);
     end
+    zeroIndex=find(data==0);
     %用"移位法"逐步"填充"0值
     for i=1:size(zeroIndex,1)
+        if zeroIndex(i)==1
+            continue;
+        end
         data(zeroIndex(i))=data(zeroIndex(i)-1);
     end
 outdata = data;

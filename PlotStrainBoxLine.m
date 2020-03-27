@@ -3,9 +3,12 @@
 %%
 %绘制应变箱线图
 
+%通过set指令可以指定图像大小，语法为set(gcf,'position',[centerX,centerY,width,height])
+positionAndSize=[500,350,600,300];
+
 %将异常数据置0
 for i=1:size(strain,2)
-    index = find(strain(:,i)<-100);
+    index = find(strain(:,i)<-10);
     strain(index,i) = 0;
 end
 
@@ -34,12 +37,13 @@ for i = 1:4
 end
 
 %boxplot(strain,'whisker',100,'symbol','b+')
-boxplot(strain,'whisker',10000)  
+boxplot(strain,'whisker',10000,'color','b')  
 set(gca,'xtick',1:4);
 set(gca,'xticklabel',{'Sx-1','Sx-2', 'Sx-3','Sx-4'});
 xlabel('传感器编号');
 ylabel('应变(με)');
-ylim(gca,[-30,180]);
+ylim(gca,[-50,200]);
+set(gcf,'position',positionAndSize)
 
 
 

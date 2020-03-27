@@ -11,7 +11,7 @@ SampFreq = 20;     % 采样频率
 %大樟   Az-1, Az-2, Az-3
 %channel=[538 539 540];
 
-channel=[539];
+channel=[538 539 540];
 
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
@@ -31,7 +31,7 @@ for i = 1:length(channel)
     totalData=GetDataFromSqlServer(table,channel(i),24*3600*20);    %原始数据，包含日期，通道，值
        
     value=cell2mat(totalData(:,valueColIndex));    %只取“值”
-    xtime{i}=totalData(:,timeColIndex);    %获取时间
+    %xtime{i}=totalData(:,timeColIndex);    %获取时间
     value=ProcessZeroData(value);
     acc(1:length(value),i)=value;
 end
