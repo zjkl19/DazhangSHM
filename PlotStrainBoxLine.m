@@ -7,10 +7,10 @@
 positionAndSize=[500,350,600,300];
 
 %将异常数据置0
-for i=1:size(strain,2)
-    index = find(strain(:,i)<-10);
-    strain(index,i) = 0;
-end
+% for i=1:size(strain,2)
+%     index = find(strain(:,i)<-10);
+%     strain(index,i) = 0;
+% end
 
 figure(1)
 hold on

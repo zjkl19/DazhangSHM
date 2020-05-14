@@ -16,8 +16,11 @@ cursorA=exec(connA,connStr); %数据库名称、表名称
 %RowLimit = 24*3600*20; 
 %用cursA=fetch(cursorA)不限制数量
 cursA=fetch(cursorA,rowLimit); % 把数据库中的数据读取到Matlab中——fetch
- 
+temp=cursA.Data;
+
 %返回数据类型为元包（cell）型，默认为CELL型，要通过 cell2mat() 转换格式
 close(cursorA);
 close(connA);
-outdata = cursA.Data;
+
+
+outdata = temp;
