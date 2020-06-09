@@ -45,6 +45,11 @@ ylabel('应变(με)');
 ylim(gca,[-50,200]);
 set(gcf,'position',positionAndSize)
 
+folderName='DazhangMat';
+saveas(gcf, [folderName,'\','StrainBoxPlot'], 'fig');    %应变原始数据时程图
+saveas(gcf, [folderName,'\','StrainBoxPlot'], 'emf');    %应变原始数据时程图
+%close;
+
 
 
 

@@ -4,14 +4,15 @@
 %% table：表名
 %% channel：通道
 %% rowLimit：为每次读取的数据参数的行数，默认为全部读取
-%% 数据从东南大学服务器导出：intellibridge.cn
+%% 数据从中锐服务器导出
 
 %TODO：读取数据用1个Class重构
 function outdata=GetDataFromSqlServer(table,channel,rowLimit)
 datasource = 'MatlabTestLink'; %ODBC数据源名称（win10搜索 ODBC数据源）
 connA = database(datasource,'sa','jky123!'); %SQL Server的用户名和密码
 %279通道：主跨跨中应变
-connStr=['select MonitorDateTime,Channel,Value from [',table,'] where Channel=',num2str(channel),' order by MonitorDateTime'];
+connStr=['select MonitorDateTime,Channel,Value from [',table,'] where Channel=''',channel,''' order by MonitorDateTime'];
+
 cursorA=exec(connA,connStr); %数据库名称、表名称
 %RowLimit = 24*3600*20; 
 %用cursA=fetch(cursorA)不限制数量

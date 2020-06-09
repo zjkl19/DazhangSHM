@@ -1,7 +1,6 @@
 
 %%
 %测试1天数据的psd曲线图
-
 SampFreq = 20;     % 采样频率
 div=10;
 % L=length(acc);    %数据长度
@@ -9,6 +8,8 @@ div=10;
 % window=hamming(4096);    %分10段
 % noverlap=length(window)/2;   %分段重叠长度
 % [p,f]=pwelch(acc(1:fix(L/div)) ,window,noverlap,nfft,SampFreq);
+
+
 
 %%
 % 每5min识别一次频率，每次数据长1h
@@ -38,6 +39,7 @@ for i=1:size(acc,2)
         FirstFreq(j,i) = f(firstIndex+index-1);
     end
 end
+
 
 %figure(1)
 %boxplot(FirstFreq)

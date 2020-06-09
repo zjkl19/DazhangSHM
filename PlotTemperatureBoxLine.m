@@ -28,7 +28,12 @@ ylabel('ÎÂ¶È£¨ ¡æ £©','fontsize',8);
 %ylim(gca,[10,18]);    %1ÔÂ
 %ylim(gca,[17,26]);
 %ylim(gca,[16,25]);    %3ÔÂ
-set(gcf,'position',positionAndSize)
+set(gcf,'position',positionAndSize);
+
+folderName='DazhangMat';
+saveas(gcf, [folderName,'\','TemperatureBoxPlot'], 'fig');
+saveas(gcf, [folderName,'\','TemperatureBoxPlot'], 'emf');
+%close;
 
 
 

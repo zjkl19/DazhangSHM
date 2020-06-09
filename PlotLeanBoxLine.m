@@ -37,8 +37,12 @@ set(gca,'xticklabel',{'Ix-1','Iy-1', 'Ix-2','Iy-2'});
 xlabel('´«¸ÐÆ÷±àºÅ');
 ylabel('Çã½Ç(¡ã)');
 ylim(gca,[-0.20,0.20]);
-set(gcf,'position',positionAndSize)
+set(gcf,'position',positionAndSize);
 
+folderName='DazhangMat';
+saveas(gcf, [folderName,'\','LeanBoxPlot'], 'fig');
+saveas(gcf, [folderName,'\','LeanBoxPlot'], 'emf');
+%close;
 
 
 

@@ -40,7 +40,12 @@ set(gca,'xticklabel',{'Az-1','Az-2', 'Az-3'});
 xlabel('´«¸ÐÆ÷±àºÅ');
 ylabel('ÆµÂÊ(Hz)');
 ylim(gca,[4.5,6.0]);
-set(gcf,'position',positionAndSize)
+set(gcf,'position',positionAndSize);
+
+folderName='DazhangMat';
+saveas(gcf, [folderName,'\','FreqBoxPlot'], 'fig');
+saveas(gcf, [folderName,'\','FreqBoxPlot'], 'emf');
+%close;
 
 
 
