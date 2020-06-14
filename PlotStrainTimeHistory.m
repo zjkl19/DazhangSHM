@@ -1,7 +1,7 @@
 %% 绘制应变时程曲线
 %% 要提前算好strain变量，每1列表示每个通道的数据
 
-channelSelect=3;
+channelSelect=1;
 
 dataSize=size(totalData,1);
 plot(1:dataSize,strain(1:dataSize,channelSelect),'DisplayName','strain')

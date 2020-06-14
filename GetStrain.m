@@ -9,8 +9,10 @@ tic;
 SampFreq = 20;     % 采样频率
 
 %保存mat所需要的参数
-fileName = 'strain.mat';
+
 folderName='DazhangMat';
+dayStr='0528';
+fileName = ['strain',dayStr,'.mat'];
 
 %汇绿桥   SX1,SX2,SX3,SX4,SX5
 %=[275,276,277,278,279,280,281,282,283,284,285,286,287];
@@ -21,7 +23,7 @@ channel=["C1802190792","C1802190793","C1802190794","C1802190795"];
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
 
-table='D20200523';
+table=['D2020',dayStr];
 
 %TODO:考虑各个通道应变维度会不会不一样
 %ostrain= zeros(1728000,length(channel));    %原始应变数据

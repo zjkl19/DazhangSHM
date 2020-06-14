@@ -8,8 +8,9 @@ tic;
 SampFreq = 20;     % 采样频率
 
 %保存mat所需要的参数
-fileName = 'lean.mat';
 folderName='DazhangMat';
+dayStr='0528';
+fileName = ['lean',dayStr,'.mat'];
 
 %大樟   Ix-1, Iy-1, Ix-2, Iy-2
 channel=["CH32-1","CH32-2","CH32-3","CH32-4"];
@@ -17,7 +18,7 @@ channel=["CH32-1","CH32-2","CH32-3","CH32-4"];
 timeColIndex=1;    %时间所在列索引
 valueColIndex=3;   %值所在列索引
 
-table='D20200523';
+table=['D2020',dayStr];
 
 %TODO:考虑各个通道应变维度会不会不一样
 
