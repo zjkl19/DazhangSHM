@@ -20,7 +20,7 @@ valueColIndex=3;   %值所在列索引
 
 table=['D',timeStr];
 
-for i = 1:length(channel)
+for i = 1:l360ength(channel)
     totalData=GetDataFromSqlServer(table,char(channel(i)),24*3600*sampFreq);    %原始数据，包含日期，通道，值
        
     value=cell2mat(totalData(:,valueColIndex));    %只取“值”

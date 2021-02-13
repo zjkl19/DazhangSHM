@@ -15,7 +15,7 @@ set(gca,'xtick',1:4,'fontsize',8);
 set(gca,'xticklabel',{'T-1','T-2', 'T-3','T-4'},'fontsize',8);
 
 
-set(gca,'yticklabel',{'19','20', '21','22','23', '24','25','26', '27', '28'},'fontsize',8);
+set(gca,'yticklabel',{'25', '27','29','31', '33','35','37', '39','41'},'fontsize',8);
 
 %set(gca,'yticklabel',{'5','8.5', '12','15.5','19', '22.5','26','29.5'},'fontsize',8);
 %set(gca,'yticklabel',{'3','6', '9','12','15', '18','21','24', '27', '30'},'fontsize',8);
@@ -32,8 +32,8 @@ ylabel('ÎÂ¶È£¨ ¡æ £©','fontsize',8);
 set(gcf,'position',positionAndSize);
 
 folderName='DazhangMat';
-saveas(gcf, [folderName,'\','TemperatureBoxPlot'], 'fig');
-saveas(gcf, [folderName,'\','TemperatureBoxPlot'], 'emf');
+saveas(gcf, [folderName,'\','TemperatureBoxPlot',timeStr], 'fig');
+saveas(gcf, [folderName,'\','TemperatureBoxPlot',timeStr], 'emf');
 %close;
 
 

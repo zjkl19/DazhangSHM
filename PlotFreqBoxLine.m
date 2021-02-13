@@ -43,8 +43,8 @@ ylim(gca,[4.5,6.0]);
 set(gcf,'position',positionAndSize);
 
 folderName='DazhangMat';
-saveas(gcf, [folderName,'\','FreqBoxPlot'], 'fig');
-saveas(gcf, [folderName,'\','FreqBoxPlot'], 'emf');
+saveas(gcf, [folderName,'\','FreqBoxPlot',timeStr], 'fig');
+saveas(gcf, [folderName,'\','FreqBoxPlot',timeStr], 'emf');
 %close;
 
 

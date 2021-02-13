@@ -9,7 +9,7 @@ SampFreq = 20;     % 采样频率
 
 %保存mat所需要的参数
 folderName='DazhangMat';
-dayStr='0528';
+dayStr='0705';
 fileName = ['lean',dayStr,'.mat'];
 
 %大樟   Ix-1, Iy-1, Ix-2, Iy-2

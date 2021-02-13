@@ -40,8 +40,8 @@ ylim(gca,[-0.20,0.20]);
 set(gcf,'position',positionAndSize);
 
 folderName='DazhangMat';
-saveas(gcf, [folderName,'\','LeanBoxPlot'], 'fig');
-saveas(gcf, [folderName,'\','LeanBoxPlot'], 'emf');
+saveas(gcf, [folderName,'\','LeanBoxPlot',timeStr], 'fig');
+saveas(gcf, [folderName,'\','LeanBoxPlot',timeStr], 'emf');
 %close;
 
 

@@ -9,7 +9,7 @@ SampFreq = 20;     % 采样频率
 
 %保存mat所需要的参数
 folderName='DazhangMat';
-dayStr='0528';
+dayStr='0705';
 fileName = ['accelerate',dayStr,'.mat'];
 
 %大樟   Az-1, Az-2, Az-3

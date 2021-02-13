@@ -1,6 +1,7 @@
 
 
 %%
+%timeStr要预先设置
 %绘制应变箱线图
 
 %通过set指令可以指定图像大小，语法为set(gcf,'position',[centerX,centerY,width,height])
@@ -46,8 +47,8 @@ ylim(gca,[-50,200]);
 set(gcf,'position',positionAndSize)
 
 folderName='DazhangMat';
-saveas(gcf, [folderName,'\','StrainBoxPlot'], 'fig');    %应变原始数据时程图
-saveas(gcf, [folderName,'\','StrainBoxPlot'], 'emf');    %应变原始数据时程图
+saveas(gcf, [folderName,'\','StrainBoxPlot',timeStr], 'fig');    %应变原始数据时程图
+saveas(gcf, [folderName,'\','StrainBoxPlot',timeStr], 'emf');    %应变原始数据时程图
 %close;
 
 

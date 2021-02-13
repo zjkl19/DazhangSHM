@@ -11,7 +11,7 @@ SampFreq = 20;     % 采样频率
 %保存mat所需要的参数
 
 folderName='DazhangMat';
-dayStr='0528';
+dayStr='0705';
 fileName = ['strain',dayStr,'.mat'];
 
 %汇绿桥   SX1,SX2,SX3,SX4,SX5

@@ -9,7 +9,7 @@ SampFreq = 20;     % 采样频率
 
 %保存mat所需要的参数
 folderName='DazhangMat';
-dayStr='0528';
+dayStr='0705';
 fileName = ['temperature',dayStr,'.mat'];
 
 %大樟   T-1, T-2, T-3, T-4
